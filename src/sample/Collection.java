@@ -10,6 +10,7 @@ public class Collection implements IUnique {
     private User group = new User();
     private MediaCategory categories;
     private Accessibility accessibility;
+    private CollectionMedia media = new CollectionMedia();
 
     @Override
     public Object getUnique() {

@@ -6,12 +6,23 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+import java.io.IOException;
+
 public class HomeLibrary extends Application {
-    GraphicsUserInterface graphicsUserInterface = new GraphicsUserInterface();
+
+
+    public HomeLibrary() throws IOException {
+    }
 
 
     @Override
     public void start(Stage primaryStage) throws Exception{
+        GraphicsUserInterface graphicsUserInterface = new GraphicsUserInterface();
+        Parent root = FXMLLoader.load(getClass().getResource("homeLibraryStartWndw.fxml"));
+
+        primaryStage.setTitle("Home Library");
+        primaryStage.setScene(new Scene(root));
+        primaryStage.show();
 
     }
 

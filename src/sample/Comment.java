@@ -10,6 +10,6 @@ public class Comment implements IUnique{
 
     @Override
     public Object getUnique() {
-        return null;
+        return id;
     }
 }
